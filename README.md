@@ -5,4 +5,6 @@ this project used api to git movies with smart login and signup system
 -CSS with Bootstrap framework
 -JS
 -Api from movies database 
-#live Demo:
+#Description
+our project is three pages login, signup and welcome page.
+#live Demo:https://webdevelopermahmoud.github.io/Movies-Show-With-Smart-Login-And-Sign-Up/login.html
