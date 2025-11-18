@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="assest/imgs/login2.png" type="image/x-icon">
+    <link rel="stylesheet" href="assest/css/all.min.css">
+    <link rel="stylesheet" href="assest/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assest/css/style.css">
+</head>
+<body class="login-body">
+    <div class="container h-100 d-flex justify-content-center align-items-center">
+        <form class="rounded-4">
+            <div class="user-container position-absolute"><i class="fa-regular fa-circle-user text-white user-icon"></i>
+            </div>
+            <h2 class="text-white pacifico-regular text-center mb-5 mt-2">Movies Show Login</h2>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter your email">
+                <div id="emailHelp1" class="form-text text-danger d-none">Please, enter valid email.</div>
+            </div>
+            <div class="mb-3 position-relative">
+                <input type="password" class="form-control input-password" id="exampleInputPassword1"
+                    placeholder="Enter your password">
+                <div id="passwordHelp" class="form-text text-danger d-none">Password must be at least 8 characters long,
+                    contain at least 1 uppercase letter, and 1 number..</div>
+                <i class="fa-solid fa-eye-slash text-white position-absolute eye-icon1"></i>
+                <i class="fa-solid fa-eye text-white position-absolute eye-icon2 d-none"></i>
+            </div>
+            <div class="incorrectInput text-danger text-center d-none">incorrect email or password.</div>
+            <button type="submit" class="btn btn-outline-primary w-100 mb-2 mt-3">Login</button>
+            <p class="text-white text-center">Don’t have an account? <a class="text-decoration-none" href="signup.html">Sign Up</a></p>
+        </form>
+    </div>
+    <script src="assest/js/bootstrap.bundle.min.js"></script>
+    <script src="assest/js/login.js"></script>
+</body>
+</html>

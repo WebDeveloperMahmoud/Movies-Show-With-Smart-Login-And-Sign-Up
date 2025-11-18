@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Show</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assest/imgs/movie2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="assest/css/all.min.css">
+    <link rel="stylesheet" href="assest/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assest/css/style.css">
+    <script>
+        let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        if (!currentUser || !currentUser.logged) {
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+<body class="welcome-body bg-danger">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid h-100">
+                <a class="text-decoration-none text-danger fw-bold h4" href="index.html">Movies Show</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i id="icon1" class="fa-solid fa-bars text-white fs-3"></i>
+                    <i id="icon2" class="fa-solid fa-bars-staggered text-white fs-3 d-none"></i>
+                </button>
+                <div class="collapse navbar-collapse supportedcontent" id="navbarSupportedContent">
+                    <ul class="nav nav-pills mx-auto" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" data-category="now_playing" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                                type="button" role="tab" aria-controls="pills-home" aria-selected="true">Now Playing</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-category="popular" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                                type="button" role="tab" aria-controls="pills-home" aria-selected="false">Popular</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-category="top_rated" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                                type="button" role="tab" aria-controls="pills-home" aria-selected="false">Top Rated</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-category="upcoming" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
+                                role="tab" aria-controls="pills-home" aria-selected="false">Upcoming</button>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-danger logout me-3">Logout</button>
+                    <button class="btn btn-outline-danger signout">Signout</button>
+                </div>
+        </div>
+    </nav>
+    <div class="tab-content bg-danger" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+            <div id="spinner" class="text-center my-5 d-none">
+                <div class="spinner-border text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <div class="row g-3"></div>
+        </div>
+    </div>
+    <script src="assest/js/bootstrap.bundle.min.js"></script>
+    <script src="assest/js/index.js"></script>
+</body>
+</html>

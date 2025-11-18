@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+/* start welcome page  */
+.navbar {
+    height: 70px;
+    background-color: rgba(0, 0, 0, 1) !important;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 0 20px;
+}
+.nav-link {
+    color: #dc3545;
+}
+.nav-link:hover {
+    color: rgb(211, 8, 8);
+}
+.nav-link.active {
+    background-color: #dc3545 !important;
+}
+.welcome-body button.navbar-toggler {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+@media(max-width:992px) {
+    .supportedcontent {
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        position: absolute;
+        top: 72px;
+        width: 92%;
+        padding: 15px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .supportedcontent ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .supportedcontent ul li button {
+        width: 100%;
+    }
+    .supportedcontent ul li {
+        margin-bottom: 5px;
+    }
+    .logout,
+    .signout {
+        width: 100%;
+    }
+    .logout {
+        margin-top: 15px;
+    }
+    .signout {
+        margin-top: 10px;
+    }
+}
+.row{
+    margin: 10px 15px 20px 15px !important;
+}
+/* end welcome page  */
+/* start sign up and login pages */
+.signup-body,
+.login-body {
+    height: 100vh;
+    background: linear-gradient(to bottom , rgba(0,0,0,0.6)),url("/assest/imgs/bg-02.jpg"); 
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+    animation: backgroundmoving 20s linear infinite;
+}
+.signup-body form,
+.login-body form {
+    width: 500px;
+    background:linear-gradient(to bottom,#38585e12);
+    padding: 60px 45px 40px 45px;
+    box-shadow: 0 0px 2px rgba(255, 255, 255, 0.5);
+    animation: formmoving 0.9s ease-out forwards;
+}
+
+.signup-body form input,
+.login-body form input {
+    background-color: transparent;
+    caret-color: white;
+    color: white !important;
+}
+.signup-body form input:focus,
+.login-body form input:focus {
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #4486e9e7;
+    animation: inputshaked 0.5s ease;
+}
+.signup-body form input::placeholder,
+.login-body form input::placeholder {
+    color: white;
+}
+@keyframes backgroundmoving {
+    from {
+        background-position: 0 0;
+    }
+    to{
+        background-position: -1000px 0;
+    }
+}
+@keyframes formmoving {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes inputshaked {
+    0%,100%{
+        transform: scale(1);
+    }
+    25%,75% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+.user-container {
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(-110px/2);
+    background-color: black;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.726));
+    box-shadow: 0 0px 2px rgba(255, 255, 255, 0.5);
+}
+.user-container .user-icon {
+    font-size: 95px;
+}
+.signup-body .eye-icon1,
+.signup-body .eye-icon2,
+.login-body .eye-icon1,
+.login-body .eye-icon2 {
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%) translateX(0);
+    font-size: 15px;
+    cursor: pointer;
+}
+.signup-body form input:focus ~ .eye-icon1,
+.signup-body form input:focus ~ .eye-icon2,
+.login-body form input:focus ~ .eye-icon1,
+.login-body form input:focus ~ .eye-icon2 {
+    animation: iconmove 0.5s ease;
+}
+@keyframes iconmove {
+    0%,100% {
+        transform: translateY(-50%) translateX(0);
+    } 
+    25%,75% {
+        transform: translateY(-50%) translateX(5px);
+    } 
+    50% {
+        transform: translateY(-50%) translateX(-5px);
+    }
+}
+
+@media(max-width:768px) {
+    .signup-body form,
+    .login-body form {
+        padding: 60px 15px 40px 15px;
+    }
+    .user-container {
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(-100px/2);
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.726));
+    box-shadow: 0 0px 2px rgba(255, 255, 255, 0.5);
+}
+.user-container .user-icon {
+    font-size: 85px;
+}
+}
+/* end sign up and login pages */
