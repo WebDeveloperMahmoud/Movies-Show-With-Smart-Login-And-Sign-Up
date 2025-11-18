@@ -75,6 +75,13 @@
     background-size: 200% 200%;
     animation: backgroundmoving 20s linear infinite;
 }
+@media (max-width:768px){
+    .signup-body,
+    .login-body {
+        background-size: cover;
+        animation: none;
+    }
+}
 .signup-body form,
 .login-body form {
     width: 500px;
